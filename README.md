@@ -44,23 +44,23 @@ The map can rotate
         mapMovement()  
     }  
   
-Class Car(){  
+    Class Car(){  
       this.posX  
       this.posY  
         moveCar()  
         acelerateCar()  
-}  
-  
-Class Obstacle(){  
+    }  
+
+    Class Obstacle(){  
       this.posX  
       this.posY  
         createObst()  
         acelerateObst()  
-}  
+    }  
+
+    Class Map(){  
   
-Class Map(){  
-  
-}  
+    }  
 
 
 
