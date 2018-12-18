@@ -1,4 +1,4 @@
-#IronCar Racing 
+# IronCar Racing 
 
 ## Description
 
@@ -113,5 +113,5 @@ URls for the project repo and deploy
 
 ### Slides
 
-[Link Slides.com](https://slides.com/alvarocamacho/ironcar-racing#/)# iron-car-racing
+[Link Slides.com](https://slides.com/alvarocamacho/ironcar-racing#/)
 
