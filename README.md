@@ -29,32 +29,32 @@ The map can rotate
 ## Data structure
 
 Class Game(){  
-  this.car  
-  this.map  
-  this.obstacle  
-  this.metersCount  
-    drawCar()  
-    drawMap()  
-    start()  
-    assingControlsKeys()  
-    pause()  
-    end()  
-    colisionCar()  
-    mapMovement()  
+      this.car  
+      this.map  
+      this.obstacle  
+      this.metersCount  
+        drawCar()  
+        drawMap()  
+        start()  
+        assingControlsKeys()  
+        pause()  
+        end()  
+        colisionCar()  
+        mapMovement()  
 }  
   
 Class Car(){  
-  this.posX  
-  this.posY  
-    moveCar()  
-    acelerateCar()  
+      this.posX  
+      this.posY  
+        moveCar()  
+        acelerateCar()  
 }  
   
 Class Obstacle(){  
-  this.posX  
-  this.posY  
-    createObst()  
-    acelerateObst()  
+      this.posX  
+      this.posY  
+        createObst()  
+        acelerateObst()  
 }  
   
 Class Map(){  
