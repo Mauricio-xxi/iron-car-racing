@@ -106,8 +106,8 @@ Create Game ver page
 
 
 ### Git
-URls for the project repo and deploy
-[Link Repo](http://github.com)
+
+[Link Repo](https://github.com/Mauricio-xxi/iron-car-racing)
 [Link Deploy](http://github.com)
 
 
