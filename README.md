@@ -8,10 +8,10 @@ The goal is to travel as much as possible without crashing.
 
 ## MVP (CANVAS)
 
-The car is a rectangular object.
-The car moves lane changes when you press a direction key.
-The road is three lanes, the obstacles are appearing in a random way.
-When the car hits an obstacle it loses and a final screen appears.
+The car is a rectangular object  
+The car moves lane changes when you press a direction key  
+The road is three lanes, the obstacles are appearing in a random way  
+When the car hits an obstacle it loses and a final screen appears  
 
 
 ## Backlog
