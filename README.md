@@ -2,8 +2,8 @@
 
 ## Description
 
-Mini game based on a car that moves between three lanes, the car has to avoid the obstacles that stand in its way.
-The goal is to travel as much as possible without crashing.
+Mini game based on a car that moves between three lanes, the car has to avoid the obstacles that stand in its way  
+The goal is to travel as much as possible without crashing  
 
 
 ## MVP (CANVAS)
@@ -16,87 +16,85 @@ When the car hits an obstacle it loses and a final screen appears
 
 ## Backlog
 
-The car can accelerate and brake.
-The obstacles can slow down or accelerate.
-Include Music
-Count the advanced meters (Score).
-You can choose between three cars with different skills.
-Win lives and with each impact that the car is deformed.
-The map can rotate.
+The car can accelerate and brake  
+The obstacles can slow down or accelerate  
+Include Music  
+Count the advanced meters (Score)  
+You can choose between three cars with different skills  
+Win lives and with each impact that the car is deformed  
+The map can rotate  
 
 
 
 ## Data structure
 
-Class Game(){
-  this.car
-  this.map
-  this.obstacle
-  this.metersCount
-    drawCar()
-    drawMap()
-    start()
-    assingControlsKeys()
-    pause()
-    end()
-    colisionCar()
-    mapMovement()
-}
-
-Class Car(){
-  this.posX
-  this.posY
-    moveCar()
-    acelerateCar()
-}
-
-Class Obstacle(){
-  this.posX
-  this.posY
-    createObst()
-    acelerateObst()
-}
-
-Class Map(){
-
-
-}
+Class Game(){  
+  this.car  
+  this.map  
+  this.obstacle  
+  this.metersCount  
+    drawCar()  
+    drawMap()  
+    start()  
+    assingControlsKeys()  
+    pause()  
+    end()  
+    colisionCar()  
+    mapMovement()  
+}  
+  
+Class Car(){  
+  this.posX  
+  this.posY  
+    moveCar()  
+    acelerateCar()  
+}  
+  
+Class Obstacle(){  
+  this.posX  
+  this.posY  
+    createObst()  
+    acelerateObst()  
+}  
+  
+Class Map(){  
+  
+}  
 
 
 
 ## States y States Transitions
 
-- splashScreen
-  start button
-- Choose your car (optional backlog)
-  choose between 3 cars whit different skills
-- gameScreen
-  Canvas
-- gameoverScreen
-  game over message & restart
+- splashScreen  
+  start button  
+- Choose your car (optional backlog)  
+  choose between 3 cars whit different skills  
+- gameScreen  
+  Canvas  
+- gameoverScreen  
+  game over message & restart  
 
 
-## Task
-Task definition in order of priority
+## Task  
 
-Create the file structure
-Create the constructors of the Classes
-Create a square
-Draw a square on the srceen
-Create the ground
-Draw the ground on the screen
-Place correctly the elements
-Make the square moves
-Create an obstacle
-Draw the obstacle correctly
-Make the ground + the obstacle move at the same time
-Create a collision
-Take off a life if there is a collision
-Restart the map if there is a collision
-Game over screen if it has a collision
-Make a meters counter
-Create start page
-Create Game ver page
+Create the file structure  
+Create the constructors of the Classes  
+Create a square  
+Draw a square on the srceen  
+Create the ground  
+Draw the ground on the screen  
+Place correctly the elements  
+Make the square moves  
+Create an obstacle  
+Draw the obstacle correctly  
+Make the ground + the obstacle move at the same time  
+Create a collision  
+Take off a life if there is a collision  
+Restart the map if there is a collision  
+Game over screen if it has a collision  
+Make a meters counter  
+Create start page  
+Create Game ver page  
 
 ## Links
 
@@ -107,7 +105,7 @@ Create Game ver page
 
 ### Git
 
-[Link Repo](https://github.com/Mauricio-xxi/iron-car-racing)
+[Link Repo](https://github.com/Mauricio-xxi/iron-car-racing)  
 [Link Deploy](http://github.com)
 
 
