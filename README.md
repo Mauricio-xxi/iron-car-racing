@@ -28,10 +28,9 @@ The map can rotate
 
 ## Data structure
 
-Class Game(){  
 
+    Class Game(){  
       this.car  
-      
       this.map  
       this.obstacle  
       this.metersCount  
@@ -43,7 +42,7 @@ Class Game(){
         end()  
         colisionCar()  
         mapMovement()  
-}  
+    }  
   
 Class Car(){  
       this.posX  
