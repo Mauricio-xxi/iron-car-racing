@@ -1,0 +1,21 @@
+body {
+  color: black;
+  background-color: darkslategrey;
+}
+div {
+  display: flex;
+  justify-content: center;
+}
+#gameCar{
+  background-color: black;
+
+}
+.startScreen{
+  display: none;
+}
+.stopScreen{
+  display: none;
+}
+.gameOverScreen{
+  display: none;
+}
