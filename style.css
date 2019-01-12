@@ -6,10 +6,10 @@ div {
   display: flex;
   justify-content: center;
 }
-#gameCar{
-  background-color: black;
+ #gameCar{
+  background-color: white;
 
-}
+} 
 .startScreen{
   display: none;
 }
