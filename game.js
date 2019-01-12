@@ -1,5 +1,6 @@
 class Game {
   constructor(options){
+    this.stage = options.stage;
     this.car = options.car;
     this.obstacle = options.obstacle;
     this.ctx = options.ctx;
@@ -7,13 +8,7 @@ class Game {
 
   }
   _drawBoard(){
-    this.ctx.beginPath();
-    this.ctx.moveTo(0,250);   
-    this.ctx.lineTo(500,250);
-    this.ctx.closePath();
-    this.ctx.stroke();
-    this.ctx.fillStyle = "grey"
-    this.ctx.fillRect(175,250,150,250);
+    this.stage._drawStage();
     this.car._drawCar();
     this.obstacle._drawObstacle();
 

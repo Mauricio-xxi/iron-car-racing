@@ -1,6 +1,12 @@
 body {
-  color: black;
-  background-color: darkslategrey;
+  color : #00264d;
+  background-image: url("./img/horizonchase_promo_image.jpg");
+  background-size: cover;
+}
+h1 {
+  font-family: monospace;
+
+
 }
 div {
   display: flex;
