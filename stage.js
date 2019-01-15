@@ -6,7 +6,7 @@ class Stage  {
 
   }
 _drawStage(){
-
+  this.ctx.drawImage(background, 0, 0,500,800);
  
 
   // this.ctx.beginPath();

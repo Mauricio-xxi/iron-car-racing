@@ -9,13 +9,11 @@ document.onload = function(){
     //pasar objeto a game donde lleve la posición del coche 
     stage: new Stage(0,0,ctx),
     car : new Car((canvaWidth/2)-25,canvaHeight-50,ctx),
-    obstacle : new Obstacle((canvaWidth/2)-25,canvaHeight-250,ctx),
+    obstacle : new Obstacle((canvaWidth/2),0,ctx),
+    obstacle2 : new Obstacle((canvaWidth/3),50,ctx),
+    obstacle3 : new Obstacle((canvaWidth/5),100,ctx),
     ctx:ctx
     });
     game.start();
-  // game._drawBoard();
-  // game._drawCar();
-  // game.assingControlKeys();
-  console.log(document.onkeydown)
 }();
 
