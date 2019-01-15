@@ -16,5 +16,6 @@ document.onload = function(){
   // game._drawBoard();
   // game._drawCar();
   // game.assingControlKeys();
-  console.log(game.obstacle)
+  console.log(document.onkeydown)
 }();
+

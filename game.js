@@ -7,18 +7,18 @@ class Game {
 
 
   }
-  _drawBoard(){
+
+_drawBoard(){
+    this.ctx.drawImage(img1, 0, 0,500,800);
     this.stage._drawStage();
     this.car._drawCar();
     this.obstacle._drawObstacle();
-
-    //llamar a las funciones para dibujar 
   }
 start(){
   //quitar las funciones de aquí y meterlas en _drawBoard en orden, y llamar solo a drawBoard
-  this._drawBoard();
+  //this._drawBoard();
   this.assingControlKeys();
-  this.intervalGame = setInterval(this._update.bind(this),100)
+  this.intervalGame = setInterval(this._update.bind(this),60)
   //this.intervalGame = window.requestAnimationFrame(this._update.bind(this));
   //this.intervale = this.window.requestAnimationFrame(this._update)
 // al darle al botón de start se debe llamar a las funciones basicas, asignar teclas, 
