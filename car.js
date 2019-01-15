@@ -21,7 +21,18 @@ class Car {
      this.position.x -= 50;
     }
   }
-
+  
+  goUp (){
+    if(this.position.y >= 0){
+     this.position.x -= 50;
+    }
+  }
+    goDown (){
+    if(this.position.y <= 500){
+      //substituir 500 por canvaHeigth
+     this.position.y += 50;
+    }
+  }
   collidesWith(pasarPosicionM){
 
   }
