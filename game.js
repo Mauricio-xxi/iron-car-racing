@@ -31,9 +31,9 @@ assingControlKeys(){
         break;
       case 39: this.car.goRight();
         break;
-      case 32 , 38: this.obstacle._acceleration();
+      case 32 , 38: this.car.goUp();
         break;
-      case 40: this.obstacle._desacceleration();
+      case 40: this.car.goDown();
     }
   }
 

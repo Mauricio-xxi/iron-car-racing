@@ -24,10 +24,10 @@ class Car {
   
   goUp (){
     if(this.position.y >= 0){
-     this.position.x -= 50;
+     this.position.y -= 50;
     }
   }
-    goDown (){
+  goDown (){
     if(this.position.y <= 500){
       //substituir 500 por canvaHeigth
      this.position.y += 50;
