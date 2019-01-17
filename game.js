@@ -77,7 +77,7 @@ clear(){
   this.ctx.clearRect(0, 0,500,500);
 }
 gameOver(){
-  document.getElementById("gameOverScreen").style.display = "inline"
+  let gameOverScreen = document.getElementById("gameOverScreen").style.display = "flex"
   window.clearInterval(this.intervalGame)
 
 }
