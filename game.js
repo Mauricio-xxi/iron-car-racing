@@ -6,7 +6,7 @@ class Game {
     this.ctx = options.ctx;
     this.obstacle2 = options.obstacle2;
     this.obstacle3 = options.obstacle3;
-
+ 
 
   }
 
@@ -78,7 +78,7 @@ clear(){
 }
 gameOver(){
   document.getElementById("gameOverScreen").style.display = "inline"
-
+  window.clearInterval(this.intervalGame)
 
 }
 
