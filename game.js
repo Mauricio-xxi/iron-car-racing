@@ -18,6 +18,8 @@ _drawBoard(){
     this.obstacle3._drawObstacle();
   }
 start(){
+console.log("aquillega")
+  document.getElementById("gameCar").style.display = "block"
   //quitar las funciones de aquí y meterlas en _drawBoard en orden, y llamar solo a drawBoard
   //this._drawBoard();
   this.assingControlKeys();
@@ -26,6 +28,7 @@ start(){
   //this.intervale = this.window.requestAnimationFrame(this._update)
 // al darle al botón de start se debe llamar a las funciones basicas, asignar teclas, 
 //llama a window.requestAnimationFrame(this._update)
+  document.getElementById("startScreen").style.display = "none"
 }
 assingControlKeys(){
   document.onkeydown = (e) => {
@@ -46,7 +49,7 @@ _controlCollision(){
     this.car.position.x + this.car.carWith > this.obstacle.position.x &&
     this.car.position.y < this.obstacle.position.y + this.obstacle.obstacleHeight &&
     this.car.carHeight + this.car.position.y > this.obstacle.position.y) {
-     console.log("collision")
+     this.gameOver();
  }
 
 
@@ -72,6 +75,11 @@ _update(){
 }
 clear(){
   this.ctx.clearRect(0, 0,500,500);
+}
+gameOver(){
+  document.getElementById("gameOverScreen").style.display = "inline"
+
+
 }
 
 }

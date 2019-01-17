@@ -13,12 +13,11 @@ div {
   justify-content: center;
 }
  #gameCar{
-  background-color: white;
-
+  display:none;
 } 
-.startScreen{
-  display: none;
-}
+/* .startScreen{
+  
+} */
 .stopScreen{
   display: none;
 }

@@ -14,6 +14,8 @@ document.onload = function(){
     obstacle3 : new Obstacle((canvaWidth/5),100,ctx),
     ctx:ctx
     });
-    game.start();
+//    game.start();
+document.getElementById("button-start").onclick = function() {game.start()};
+
 }();
 

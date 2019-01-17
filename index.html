@@ -13,8 +13,9 @@
   <div> 
     <h1>IronCar Racing</h1>
   </div>
-  <div class="startScreen">
+  <div class="startScreen" id="startScreen">
     <h2>START</h2>
+    <button id="button-start" onclick="this.game.start();">START</button>
   </div>
   <div>
     <canvas id="gameCar" width="500px" height="500px"></canvas>
@@ -22,7 +23,7 @@
   <div class="stopScreen">
     <h2>PAUSE</h2>
   </div>
-  <div class="gameOverScreen">
+  <div class="gameOverScreen" id="gameOverScreen">
     <h2>Game Over</h2>
   </div>
 <script src="assets.js"></script>
