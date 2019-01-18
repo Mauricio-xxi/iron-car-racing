@@ -42,6 +42,10 @@ assingControlKeys(){
         break;
       case 32: this.obstacle._acceleration();
                 this.stage._accelerationStage();
+       break;
+      case 32: this.obstacle._desacceleration();
+              this.stage._brake();
+        break;
     }
   }
 
