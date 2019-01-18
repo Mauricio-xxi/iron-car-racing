@@ -6,12 +6,18 @@ class Game {
     this.ctx = options.ctx;
     this.obstacle2 = options.obstacle2;
     this.obstacle3 = options.obstacle3;
+    this.puntaje = this.obstacle.velocity;
   }
-
+ _drawPuntaje(){
+  this.ctx.font = "1.5em Arial";
+  this.ctx.fillStyle = "#FFFFFF";
+  this.ctx.fillText(`Score: ${this.puntaje}`,20,25)
+ }
 _drawBoard(){
     this.stage._drawStage();
     this.car._drawCar();
     this.obstacle._drawObstacle();
+    this._drawPuntaje();
     // this.obstacle2._drawObstacle();
     // this.obstacle3._drawObstacle();
   }
@@ -47,14 +53,15 @@ _controlCollision(){
     this.car.carHeight + this.car.position.y > this.obstacle.position.y) {
      this.gameOver();
  }
-
-
 }
+
+
 _update(){
   this.clear();
   this._drawBoard();
 //meto esta funcion para probar, recuerda moverla y crear una funcion gestora del movimiento de los obstaculos manolo
   this.obstacle._move();
+  this.puntaje++;
   // this.obstacle2._move();
   // this.obstacle3._move();
   this.stage._parallax();

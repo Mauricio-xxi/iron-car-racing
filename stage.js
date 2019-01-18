@@ -3,7 +3,7 @@ class Stage  {
     this.position = {x,y};
     this.ctx = ctx;
     this.velocity = 10;
-    this.backgroundY = -150;
+    this.backgroundY = 3200;
   }
   _accelerationStage(){
   this.velocity++
@@ -16,7 +16,7 @@ class Stage  {
   _parallax(){
     if(this.backgroundY > 0){
       this.backgroundY+= this.velocity;
-      return this.backgroundY = -150;
+      return this.backgroundY = -3200;
     }else{
   return (this.backgroundY+=this.velocity)
   }
