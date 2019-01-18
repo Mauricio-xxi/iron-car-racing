@@ -11,11 +11,11 @@ _drawObstacle(){
   this.ctx.drawImage(carObstacle,this.position.x,this.position.y,this.obstacleWith,this.obstacleHeight)
 }
 _acceleration(){
-  this.velocity += 1;
+  this.velocity ++;
 }
 _desacceleration(){
   if(this.velocity > 2)
-  this.velocity -= 1;
+  this.velocity --;
 }
 _randomNumber(){
   console.log(Math.random());

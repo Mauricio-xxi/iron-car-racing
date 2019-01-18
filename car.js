@@ -7,17 +7,17 @@ class Car {
   }
   _drawCar(){
     this.ctx.drawImage(carImage,this.position.x,this.position.y,this.carWith,this.carHeight)
-  //meter el coche y el calculo para ponerlo en medio en cualquier tipo de pantalla (canvasWidth/2,canvasHeight, el tamaño del coche)
-  }
+   }
+
   goRight (){
     if(true){
-      this.position.x += 10;
+      this.position.x += 20;
     }
   }
 
   goLeft (){
     if(true){
-     this.position.x -= 10;
+     this.position.x -= 20;
     }
   }
   
@@ -31,11 +31,5 @@ class Car {
       //substituir 500 por canvaHeigth
      this.position.y += 10;
     }
-  }
-  collidesWith(pasarPosicionM){
-
-  }
-  stop(){
-
   }
 }

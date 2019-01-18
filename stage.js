@@ -2,25 +2,27 @@ class Stage  {
   constructor(x,y,ctx){
     this.position = {x,y};
     this.ctx = ctx;
-
-
+    this.velocity = 10;
+    this.backgroundY = -150;
   }
-_drawStage(){
-  this.ctx.drawImage(background, 0, 0,500,800);
- 
+  _accelerationStage(){
+  this.velocity++
+  }   
+  _brake(){
 
-  // this.ctx.beginPath();
-  //   this.ctx.moveTo(0,250);   
-  //   this.ctx.lineTo(500,250);
-  //   this.ctx.closePath();
-  //   this.ctx.stroke();
-  //   this.ctx.fillStyle = "grey"
-  //   this.ctx.fillRect(175,250,150,250);
 
+
+  }            
+  _parallax(){
+    if(this.backgroundY > 0){
+      this.backgroundY+= this.velocity;
+      return this.backgroundY = -150;
+    }else{
+  return (this.backgroundY+=this.velocity)
+  }
 }
-
-
-
-
-
+  _drawStage(){
+    this.ctx.drawImage(background, 0, this.backgroundY,500,800);
+  
+  }
 }
