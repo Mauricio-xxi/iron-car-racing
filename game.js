@@ -7,6 +7,8 @@ class Game {
     this.obstacle2 = options.obstacle2;
     this.obstacle3 = options.obstacle3;
     this.puntaje = this.obstacle.velocity;
+    this.maxSpeed = 100;
+    this.minSpeed = 10;
   }
  _drawPuntaje(){
   this.ctx.font = "1.5em Arial";
@@ -18,8 +20,8 @@ _drawBoard(){
     this.car._drawCar();
     this.obstacle._drawObstacle();
     this._drawPuntaje();
-    // this.obstacle2._drawObstacle();
-    // this.obstacle3._drawObstacle();
+    this.obstacle2._drawObstacle();
+    this.obstacle3._drawObstacle();
   }
 start(){
   document.getElementById("gameCar").style.display = "block"
@@ -41,9 +43,13 @@ assingControlKeys(){
       case 40: this.car.goDown();
         break;
       case 32: this.obstacle._acceleration();
+               this.obstacle2._acceleration();
+               this.obstacle3._acceleration();
                 this.stage._accelerationStage();
        break;
-      case 32: this.obstacle._desacceleration();
+      case 17: this.obstacle._desacceleration();
+               this.obstacle2._desacceleration();
+               this.obstacle3._desacceleration();
               this.stage._brake();
         break;
     }
@@ -56,7 +62,19 @@ _controlCollision(){
     this.car.position.y < this.obstacle.position.y + this.obstacle.obstacleHeight &&
     this.car.carHeight + this.car.position.y > this.obstacle.position.y) {
      this.gameOver();
- }
+    }
+     else if (this.car.position.x < this.obstacle2.position.x + this.obstacle2.obstacleWith &&
+      this.car.position.x + this.car.carWith > this.obstacle2.position.x &&
+      this.car.position.y < this.obstacle2.position.y + this.obstacle2.obstacleHeight &&
+      this.car.carHeight + this.car.position.y > this.obstacle2.position.y) {
+       this.gameOver();
+    }
+     else if (this.car.position.x < this.obstacle3.position.x + this.obstacle3.obstacleWith &&
+      this.car.position.x + this.car.carWith > this.obstacle3.position.x &&
+      this.car.position.y < this.obstacle3.position.y + this.obstacle3.obstacleHeight &&
+      this.car.carHeight + this.car.position.y > this.obstacle3.position.y) {
+       this.gameOver();
+      }
 }
 
 
@@ -66,8 +84,8 @@ _update(){
 //meto esta funcion para probar, recuerda moverla y crear una funcion gestora del movimiento de los obstaculos manolo
   this.obstacle._move();
   this.puntaje++;
-  // this.obstacle2._move();
-  // this.obstacle3._move();
+  this.obstacle2._move();
+  this.obstacle3._move();
   this.stage._parallax();
   this._controlCollision();
 }

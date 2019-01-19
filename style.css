@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content:center;
   align-items: center;
-  height: 900px;
+  height: 600px;
   /* background-image: url("./img/horizonchase_promo_image.jpg");
   background-size: cover; */
 }
@@ -16,6 +16,8 @@ h1 {
 }
 h2 {
   color: white;
+  align-items: center;
+  justify-content: center;
 }
 h3{
   font-size: 1em;
@@ -30,7 +32,7 @@ h3{
 }
  #gameCar{
   display:none;
-  position: absolute;
+  position: relative;
   z-index: 1;
 } 
 #startScreen{
@@ -47,6 +49,7 @@ h3{
 }
 .gameOverScreen{
   display: none;
+  position: absolute;
   z-index: 3;
   background-color: black;
   opacity: 0.5;
