@@ -26,7 +26,7 @@ _drawBoard(){
 start(){
   document.getElementById("gameCar").style.display = "block"
   this.assingControlKeys();
-  this.intervalGame = setInterval(this._update.bind(this),60)
+  this.intervalGame = setInterval(this._update.bind(this),30)
   //this.intervalGame = window.requestAnimationFrame(this._update.bind(this));
   document.getElementById("startScreen").style.display = "none"
   document.getElementById("header").style.display = "none"
@@ -95,7 +95,7 @@ clear(){
 gameOver(){
   let gameOverScreen = document.getElementById("gameOverScreen").style.display = "flex"
   window.clearInterval(this.intervalGame)
-  let finalScore = document.getElementById("scoreFInal").innerHTML = `Score:${this.puntaje}`;
+  let finalScore = document.getElementById("scoreFInal").innerHTML = `Score:${this.puntaje-1}`;
   //finalScore.document.write(this.puntaje)
 }
 }

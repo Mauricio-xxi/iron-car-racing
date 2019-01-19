@@ -10,14 +10,14 @@ class Car {
    }
 
   goRight (){
-    if(this.position.x < 350){
-      this.position.x += 15;
+    if(this.position.x < 340){
+      this.position.x += 40;
     }
   }
 
   goLeft (){
-    if(this.position.x > 80){
-     this.position.x -= 15;
+    if(this.position.x > 110){
+     this.position.x -= 40;
     }
   }
   
