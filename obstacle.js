@@ -22,12 +22,19 @@ _desacceleration(){
 _randomNumber(){
   console.log(Math.random());
 }
+
+_changesY(){
+  let valor = this._randomNumber();
+  if (valor < 0.33){ return this.position.y = -240}
+ else if (valor > 0.66){return this.position.y =  -160}
+ else {return this.position.y = -80}
+}
 _changeRoad(){
   let valor = Math.random();
- if (valor < 0.25){ this.position.x = 150; this.position.y = 0}
- else if (valor > 0.50){this.position.x = 250;this.position.y = 0}
- else if (valor >0.75){this.position.x = 300;this.position.y = 0}
- else {this.position.x = 200 ;this.position.y = 0}
+ if (valor < 0.25){ this.position.x = 150; this.position.y =this._changesY()}
+ else if (valor < 0.50){this.position.x = 250;this.position.y = this._changesY()}
+ else if (valor < 0.80){this.position.x = 300;this.position.y = this._changesY()}
+ else {this.position.x = 200 ;this.position.y = this._changesY()}
 }
 _move(){
   if(this.position.y < 500){

@@ -6,8 +6,9 @@ body {
   justify-content:center;
   align-items: center;
   height: 600px;
-  /* background-image: url("./img/horizonchase_promo_image.jpg");
-  background-size: cover; */
+  background-image: url("https://images.wallpaperscraft.com/image/lights_car_dark_128635_1440x2560.jpg");
+  background-size: cover; 
+  background-position: center;
 }
 h1 {
   font-size: 5em;
@@ -27,6 +28,7 @@ h3{
 
 #container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

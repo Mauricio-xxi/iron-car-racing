@@ -10,8 +10,8 @@ document.onload = function(){
     stage: new Stage(0,0,ctx),
     car : new Car((canvaWidth/2)-25,canvaHeight-50,ctx),
     obstacle : new Obstacle((canvaWidth/2),0,ctx),
-    obstacle2 : new Obstacle((canvaWidth/3),50,ctx),
-    obstacle3 : new Obstacle((canvaWidth/5),100,ctx),
+    obstacle2 : new Obstacle((canvaWidth/3),160,ctx),
+    obstacle3 : new Obstacle((canvaWidth/5),240,ctx),
     ctx:ctx
     });
 document.getElementById("button-start").onclick = function() {game.start()};
