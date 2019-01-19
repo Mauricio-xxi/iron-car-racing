@@ -6,9 +6,12 @@ class Obstacle {
     this.velocity = 10 ;
     this.ctx = ctx;
   }
-
+ _randomNumber(){
+  Math.random();
+ }
+  
 _drawObstacle(){
-  this.ctx.drawImage(carObstacle,this.position.x,this.position.y,this.obstacleWith,this.obstacleHeight)
+  this.ctx.drawImage(carObstacle2,this.position.x,this.position.y,this.obstacleWith+5,this.obstacleHeight+5)
 }
 _acceleration(){
   this.velocity +=10;
@@ -19,22 +22,17 @@ _desacceleration(){
   this.velocity -=10;}
 }
 
-_randomNumber(){
-  console.log(Math.random());
-}
-
 _changesY(){
   let valor = this._randomNumber();
-  if (valor < 0.33){ return this.position.y = -240}
- else if (valor > 0.66){return this.position.y =  -160}
- else {return this.position.y = -80}
+  if (valor < 0.5){ return this.position.y = -240}
+ else{return this.position.y =  -160}
 }
 _changeRoad(){
   let valor = Math.random();
- if (valor < 0.25){ this.position.x = 150; this.position.y =this._changesY()}
- else if (valor < 0.50){this.position.x = 250;this.position.y = this._changesY()}
- else if (valor < 0.80){this.position.x = 300;this.position.y = this._changesY()}
- else {this.position.x = 200 ;this.position.y = this._changesY()}
+ if (valor < 0.25){ this.position.x = 110; this.position.y =this._changesY()}
+ else if (valor < 0.50){this.position.x = 180;this.position.y = this._changesY()}
+ else if (valor < 0.80){this.position.x = 260;this.position.y = this._changesY()}
+ else {this.position.x = 340;this.position.y = this._changesY()}
 }
 _move(){
   if(this.position.y < 500){

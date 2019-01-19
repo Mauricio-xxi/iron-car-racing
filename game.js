@@ -95,5 +95,7 @@ clear(){
 gameOver(){
   let gameOverScreen = document.getElementById("gameOverScreen").style.display = "flex"
   window.clearInterval(this.intervalGame)
+  let finalScore = document.getElementById("scoreFInal").innerHTML = `Score:${this.puntaje}`;
+  //finalScore.document.write(this.puntaje)
 }
 }
