@@ -26,6 +26,7 @@ _drawBoard(){
 start(){
   document.getElementById("gameCar").style.display = "block"
   this.assingControlKeys();
+  this.assingControlTouch();
   this.intervalGame = setInterval(this._update.bind(this),30)
   //this.intervalGame = window.requestAnimationFrame(this._update.bind(this));
   document.getElementById("startScreen").style.display = "none"
@@ -56,6 +57,30 @@ assingControlKeys(){
         break;
     }
   }
+}
+assingControlTouch(){
+  let xIni;
+  let yIni;
+  let canvas = document.getElementById('gameCar');
+  canvas.addEventListener('touchstart', function(e){
+      if (e.targetTouches.length == 1) { 
+  let touch = e.targetTouches[0]; 
+  xIni = touch.pageX;
+  yIni = touch.pageY;
+}
+  }, false);
+  canvas.addEventListener('touchmove', function(e){
+      if (e.targetTouches.length == 1) { 
+  let touch = e.targetTouches[0]; 
+  if((touch.pageX>xIni+20) && (touch.pageY> yIni-5) && (touch.pageY<yIni+5)){
+    this.car.goLeft().bind(this);
+  }
+  if((touch.pageX<xIni-20) && (touch.pageY> yIni-5) && (touch.pageY<yIni+5)){
+    console.log("der")
+    this.car.goRight().bind(this);
+  } 
+}
+  }, false); 
 }
   _controlCollision(){
    if (this.car.position.x < this.obstacle.position.x + this.obstacle.obstacleWith &&
