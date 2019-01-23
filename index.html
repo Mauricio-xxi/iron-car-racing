@@ -21,8 +21,9 @@
   <div>
     <canvas id="gameCar" width="500px" height="500px"></canvas>
   </div>
-  <div class="stopScreen">
+  <div id="pauseScreen">
     <h2>PAUSE</h2>
+    <button id="button-continue" onclick="this.game.continue();">Continue</button>
   </div>
   <div class="gameOverScreen" id="gameOverScreen">
     <h2>Game Over</h2>

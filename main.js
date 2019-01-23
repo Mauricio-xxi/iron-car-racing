@@ -18,5 +18,6 @@ console.log(canvaWidth/2)
 console.log(canvaWidth/3)
 console.log(canvaWidth/5)
 document.getElementById("button-start").onclick = function() {game.start()};
+document.getElementById("button-continue").onclick = function() {game.continue()};
 }();
 

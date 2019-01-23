@@ -52,50 +52,58 @@ assingControlKeys(){
                this.obstacle3._desacceleration();
               this.stage._brake();
         break;
+      case 80:this.pause();
+        break;
     }
   }
-
 }
-_controlCollision(){
-  if (this.car.position.x < this.obstacle.position.x + this.obstacle.obstacleWith &&
+  _controlCollision(){
+   if (this.car.position.x < this.obstacle.position.x + this.obstacle.obstacleWith &&
     this.car.position.x + this.car.carWith > this.obstacle.position.x &&
     this.car.position.y < this.obstacle.position.y + this.obstacle.obstacleHeight &&
     this.car.carHeight + this.car.position.y > this.obstacle.position.y) {
+    this.gameOver();
+    }
+   else if (this.car.position.x < this.obstacle2.position.x + this.obstacle2.obstacleWith &&
+     this.car.position.x + this.car.carWith > this.obstacle2.position.x &&
+     this.car.position.y < this.obstacle2.position.y + this.obstacle2.obstacleHeight &&
+     this.car.carHeight + this.car.position.y > this.obstacle2.position.y) {
      this.gameOver();
     }
-     else if (this.car.position.x < this.obstacle2.position.x + this.obstacle2.obstacleWith &&
-      this.car.position.x + this.car.carWith > this.obstacle2.position.x &&
-      this.car.position.y < this.obstacle2.position.y + this.obstacle2.obstacleHeight &&
-      this.car.carHeight + this.car.position.y > this.obstacle2.position.y) {
-       this.gameOver();
+    else if (this.car.position.x < this.obstacle3.position.x + this.obstacle3.obstacleWith &&
+     this.car.position.x + this.car.carWith > this.obstacle3.position.x &&
+     this.car.position.y < this.obstacle3.position.y + this.obstacle3.obstacleHeight &&
+     this.car.carHeight + this.car.position.y > this.obstacle3.position.y) {
+     this.gameOver();
     }
-     else if (this.car.position.x < this.obstacle3.position.x + this.obstacle3.obstacleWith &&
-      this.car.position.x + this.car.carWith > this.obstacle3.position.x &&
-      this.car.position.y < this.obstacle3.position.y + this.obstacle3.obstacleHeight &&
-      this.car.carHeight + this.car.position.y > this.obstacle3.position.y) {
-       this.gameOver();
-      }
-}
+  }
 
 
-_update(){
-  this.clear();
-  this._drawBoard();
-//meto esta funcion para probar, recuerda moverla y crear una funcion gestora del movimiento de los obstaculos manolo
-  this.obstacle._move();
-  this.puntaje++;
-  this.obstacle2._move();
-  this.obstacle3._move();
-  this.stage._parallax();
-  this._controlCollision();
-}
-clear(){
-  this.ctx.clearRect(0, 0,500,500);
-}
-gameOver(){
-  let gameOverScreen = document.getElementById("gameOverScreen").style.display = "flex"
-  window.clearInterval(this.intervalGame)
-  let finalScore = document.getElementById("scoreFInal").innerHTML = `Score:${this.puntaje-1}`;
-  //finalScore.document.write(this.puntaje)
-}
+  _update(){  
+    this.clear();
+    this._drawBoard();
+  //meto esta funcion para probar, recuerda moverla y crear una funcion gestora del movimiento de los obstaculos manolo
+    this.obstacle._move();
+    this.puntaje++;
+    this.obstacle2._move();
+    this.obstacle3._move();
+    this.stage._parallax();
+    this._controlCollision();
+  }
+  clear(){
+    this.ctx.clearRect(0, 0,500,500);
+  }
+  gameOver(){
+    let gameOverScreen = document.getElementById("gameOverScreen").style.display = "flex";
+    window.clearInterval(this.intervalGame);
+    let finalScore = document.getElementById("scoreFInal").innerHTML = `Score:${this.puntaje-1}`;
+  }
+  pause(){
+    clearInterval(this.intervalGame)
+    document.getElementById("pauseScreen").style.display = "flex";
+  }
+  continue(){
+    document.getElementById("pauseScreen").style.display = "none"
+    this.intervalGame = setInterval(this._update.bind(this),30)
+  }
 }
