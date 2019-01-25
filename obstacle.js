@@ -11,7 +11,7 @@ class Obstacle {
  }
   
 _drawObstacle(){
-  this.ctx.drawImage(carObstacle2,this.position.x,this.position.y,this.obstacleWith+5,this.obstacleHeight+5)
+  this.ctx.drawImage(carObstacle2,this.position.x,this.position.y,this.obstacleWith+9,this.obstacleHeight+9)
 }
 _acceleration(){
   this.velocity +=10;

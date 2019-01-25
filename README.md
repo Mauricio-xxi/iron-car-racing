@@ -107,10 +107,10 @@ Create Game ver page
 ### Git
 
 [Link Repo](https://github.com/Mauricio-xxi/iron-car-racing)  
-[Link Deploy](http://github.com)
+[Link Deploy](https://mauricio-xxi.github.io/iron-car-racing/)
 
 
 ### Slides
 
-[Link Slides.com](https://slides.com/alvarocamacho/ironcar-racing#/)
+[Link Slides.com](https://slides.com/mauriciocamacho/deck/live#/3/)
 

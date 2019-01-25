@@ -24,6 +24,7 @@ _drawBoard(){
     this.obstacle3._drawObstacle();
   }
 start(){
+  //inicialSound.play();
   document.getElementById("gameCar").style.display = "block"
   this.assingControlKeys();
   this.assingControlTouch();

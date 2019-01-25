@@ -7,3 +7,5 @@ let carObstacle = new Image();
 carObstacle.src = 'img/clipart1961122.png'
 let carObstacle2 = new Image();
 carObstacle2.src = 'img/5c4308716e1b0.png'
+// let inicialSound = new  Audio();
+// inicialSound.src = 'https://www.salamisound.com/4788474-highway-right-on-the-lane'
